@@ -1,4 +1,4 @@
-let startTime = 300;
+let startTime = 120;
 let timer = document.getElementById('timer');
 const stopTime = (startTime + 1) * 1000;
 
