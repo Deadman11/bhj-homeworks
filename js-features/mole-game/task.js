@@ -5,15 +5,18 @@ const holes = document.getElementsByClassName('hole');
 function increasedCountMoles(){
     document.getElementById('dead').textContent = ++countMoles
 }
+
 function increasedMissclick(){
     document.getElementById('lost').textContent = ++missClick
 }
+
 function clearScore(){
     document.getElementById('dead').textContent = 0
     document.getElementById('lost').textContent = 0
     countMoles = 0;
     missClick = 0;
 }
+
 function winOrLose(){
     if(countMoles === 10){
         alert("Победа!");
