@@ -1,6 +1,5 @@
 let startTime = 120;
 let timer = document.getElementById('timer');
-const stopTime = (startTime + 1) * 1000;
 
 function countdownTimer() {
     let startHours = Math.floor(startTime / 3600);
@@ -13,8 +12,8 @@ function countdownTimer() {
     startTime--
     if(startTime === 0){
         alert("Вы победили в конкурсе!")
+        clearInterval(timerId);
     }
 }
 
 let timerId = setInterval(countdownTimer, 1000);
-setTimeout(() => {clearInterval(timerId)}, stopTime);
