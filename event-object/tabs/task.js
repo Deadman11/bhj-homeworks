@@ -9,7 +9,10 @@ function chengeActiveTabs(){
         tabContent.classList = "tab__content"
     }
 
-    let i = tabs.indexOf(this);
+    let i = tabs.indexOf((event) => {
+        event.target
+    });
+
 
     tabs[i].classList = "tab tab_active";
     tabsContent[i].classList = "tab__content tab__content_active"
