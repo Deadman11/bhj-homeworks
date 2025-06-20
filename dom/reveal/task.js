@@ -1,8 +1,19 @@
-const reneval = document.querySelectorAll('.reneval');
+const revealElement = Array.from(document.querySelectorAll('.reveal'));
 
-reneval.forEach(elem => {
-    console.log(elem.getBoundingClientRect())
-});
+function isVisible(el){
+    el.forEach(element => {
+        const {top, bottom} = element.getBoundingClientRect();
 
+        if(bottom < 0){
+            return element.classList.remove("reveal_active")
+        }
+        if(top > window.innerHeight){
+            return element.classList.remove("reveal_active")
+        }
+        return element.classList.add("reveal_active")
+    });
+}
 
-console.log(reneval)
+setInterval(() => {
+    isVisible(revealElement)
+}, 1000);

@@ -18,4 +18,28 @@ fontSizeBtn.forEach(el => el.addEventListener("click", () =>{
 }))
 
 
-// console.log(fontSizeBtn)
+
+// const bookColor = document.querySelectorAll('.color');
+// const textColor = [];
+// const bgColor = [];
+
+// function takeColor(){
+//     bookColor.forEach(el => {
+//         if(el.classList.contains('text_color_black') || el.classList.contains('text_color_gray') || el.classList.contains('text_color_whitesmoke')){
+//             textColor.push(el);
+//         }
+//         else{
+//             bgColor.push(el)
+//         }
+//     })
+// }
+
+// textColor.forEach(el => el.addEventListener("click", () => {
+//     textColor.forEach(textColorActiveElem => textColorActiveElem.classList.remove('color_active'));
+//     el.classList.add("color_active");
+// }))
+
+// takeColor()
+
+
+
