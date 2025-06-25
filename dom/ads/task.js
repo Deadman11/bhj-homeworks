@@ -8,13 +8,16 @@ function changeSpeed(){
     return rotatorCase[index].dataset.speed;
 }
 
-function changeText(text){
-    text.forEach(element => element.classList.remove('rotator__case_active'));
-    text[index].style.color = changeColor();
-    text[index].classList.add('rotator__case_active')
-    index = (index + 1) % text.length;
+function changeText(elem){
+    elem.forEach(el => el.classList.remove("rotator__case_active"));
+    elem[index].style.color = changeColor();
+    elem[index].classList.add("rotator__case_active");
+    setTimeout(() =>{
+        if(index < 6){
+            changeText(rotatorCase)
+        }
+        index = (index + 1) % elem.length;
+    }, changeSpeed())
 }
 
-setInterval(() => {
-    changeText(rotatorCase);
-}, changeSpeed());
+changeText(rotatorCase)
